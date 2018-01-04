@@ -1,0 +1,47 @@
+
+
+<!--The content below is only a placeholder and can be replaced.
+<img [src]="response2.data.avatar"/>
+(keyup)="transform (responseParam,term)"
+-->
+<h1 text="center">
+  {{title}}
+</h1>
+
+<div style="text-align:center">
+  
+  <input type="text" [(ngModel)]="term" >
+  <button (click)="transform (responseParam,term)">שלח</button>
+  <button (click)="showAll ()">הצג הכל</button>
+ 
+  
+
+  <p></p><p></p><p></p>
+
+  <table dir="rtl">
+    <tr> 
+      
+      <td>Name</td>
+      <td>Native Name</td>
+      <td>Capital</td>
+      <td>Population</td>
+      <td>Flag</td>
+
+    </tr>
+    <tr *ngFor= "let x of responseParam">
+    
+     
+        <td>{{x.name}}</td>
+        <td>{{x.nativeName}}</td>
+        <td>{{x.capital}}</td>
+        <td>{{x.population}}</td>
+        <td>
+          
+                  <img [src]="x.flag" style:width="50px" height="80px"/>
+          
+       </td>
+    </tr>  
+  </table>
+
+  
+    
